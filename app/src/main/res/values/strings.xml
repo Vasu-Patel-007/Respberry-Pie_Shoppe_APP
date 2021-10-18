@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">411Pro</string>
+    <string name="breakfast_button">Breakfast</string>
+    <string name="coffee_button">Coffee</string>
+    <string name="pastries_button">Pastries</string>
+    <string name="budget_button">Budget</string>
 </resources>
