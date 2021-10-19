@@ -4,4 +4,11 @@
     <string name="coffee_button">Coffee</string>
     <string name="pastries_button">Pastries</string>
     <string name="budget_button">Budget</string>
+    <string name="waffle_button">Waffle</string>
+    <string name="toast_button">Toast</string>
+    <string name="pancake_button">Pancake</string>
+    <string name="muffin_button">Muffin</string>
+    <string name="bagel_button">Bagel</string>
+    <string name="croissant_button">Croissant</string>
+    <string name="breakfast_menu">Breakfast Menu</string>
 </resources>

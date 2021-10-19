@@ -10,8 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.411Pro">
         <activity
+            android:name=".BreakfastActivity"
+            android:exported="true"
+            android:label="Have a Sweet Treat for Breakfast!"/>
+        <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true"
+            android:label="Welcome to the Raspberry Pi Shoppe!">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
