@@ -13,8 +13,7 @@
         android:paddingStart="100dp"
         android:paddingEnd="100dp"
         android:paddingTop="50dp"
-        android:orientation="vertical"
-        android:onClick="goToBreakfastPage">
+        android:orientation="vertical">
 
         <Button
             android:id="@+id/breakfast"

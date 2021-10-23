@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <GridLayout
+        android:id="@+id/coffee_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:rowCount="3"
+        android:paddingTop="100dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <Button
+            android:id="@+id/espresso"
+            android:layout_width="150dp"
+            android:layout_height="90dp"
+            android:text="@string/espresso_button"/>
+
+        <Button
+            android:id="@+id/cappuccino"
+            android:layout_width="150dp"
+            android:layout_height="90dp"
+            android:layout_marginLeft="30dp"
+            android:text="@string/cappuccino_button"/>
+
+        <Button
+            android:id="@+id/latte"
+            android:layout_width="150dp"
+            android:layout_height="90dp"
+            android:layout_marginTop="80dp"
+            android:text="@string/latte_button"/>
+
+        <Button
+            android:id="@+id/doppio"
+            android:layout_width="150dp"
+            android:layout_height="90dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginLeft="30dp"
+            android:text="@string/doppio_button"/>
+
+        <Button
+            android:id="@+id/arabica"
+            android:layout_width="150dp"
+            android:layout_height="90dp"
+            android:layout_marginTop="80dp"
+            android:text="@string/arabica_button"/>
+
+        <Button
+            android:id="@+id/frappe"
+            android:layout_width="150dp"
+            android:layout_height="90dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginLeft="30dp"
+            android:text="@string/frappe_button"/>
+
+    </GridLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

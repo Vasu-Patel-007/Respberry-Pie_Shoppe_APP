@@ -1,9 +1,11 @@
 <resources>
     <string name="app_name">411Pro</string>
+
     <string name="breakfast_button">Breakfast</string>
     <string name="coffee_button">Coffee</string>
     <string name="pastries_button">Pastries</string>
     <string name="budget_button">Budget</string>
+
     <string name="waffle_button">Waffle</string>
     <string name="toast_button">Toast</string>
     <string name="pancake_button">Pancake</string>
@@ -11,4 +13,14 @@
     <string name="bagel_button">Bagel</string>
     <string name="croissant_button">Croissant</string>
     <string name="breakfast_menu">Breakfast Menu</string>
+
+    <string name="frappe_button">Frappe</string>
+    <string name="cappuccino_button">Cappuccino</string>
+    <string name="latte_button">Latte</string>
+    <string name="espresso_button">Espresso</string>
+    <string name="doppio_button">Doppio</string>
+    <string name="arabica_button">Arabica</string>
+    <string name="coffee_menu">Coffee Menu</string>
+
+
 </resources>

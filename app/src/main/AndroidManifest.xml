@@ -10,9 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.411Pro">
         <activity
+            android:name=".coffee"
+            android:exported="true"
+            android:label="An Energizing Start to Your Day!"/>
+        <activity
             android:name=".BreakfastActivity"
             android:exported="true"
-            android:label="Have a Sweet Treat for Breakfast!"/>
+            android:label="Have a Sweet Treat for Breakfast!" />
         <activity
             android:name=".MainActivity"
             android:exported="true"

@@ -15,11 +15,19 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Button breakfastBtn = (Button)findViewById(R.id.breakfast);
+        Button coffeeBtn = (Button)findViewById(R.id.coffee);
 
         breakfastBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MainActivity.this, BreakfastActivity.class));
+            }
+        });
+
+        coffeeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, coffee.class));
             }
         });
     }
