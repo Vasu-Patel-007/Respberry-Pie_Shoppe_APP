@@ -22,5 +22,12 @@
     <string name="arabica_button">Arabica</string>
     <string name="coffee_menu">Coffee Menu</string>
 
-
+    <string-array name="names">
+        <item>Waffle</item>
+        <item>Toast</item>
+        <item>Pancake</item>
+        <item>Muffin</item>
+        <item>Bagel</item>
+        <item>Croissant</item>
+    </string-array>
 </resources>
