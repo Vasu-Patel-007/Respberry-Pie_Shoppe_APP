@@ -22,12 +22,30 @@
     <string name="arabica_button">Arabica</string>
     <string name="coffee_menu">Coffee Menu</string>
 
-    <string-array name="names">
+    <string-array name="breakfastNames">
         <item>Waffle</item>
         <item>Toast</item>
         <item>Pancake</item>
         <item>Muffin</item>
         <item>Bagel</item>
         <item>Croissant</item>
+    </string-array>
+
+    <string-array name="coffeeNames">
+        <item>Frappe</item>
+        <item>Cappuccino</item>
+        <item>Latte</item>
+        <item>Espresso</item>
+        <item>Doppio</item>
+        <item>Arabica</item>
+    </string-array>
+
+    <string-array name="pastriesNames">
+        <item>Raspberry Pie</item>
+        <item>Danish</item>
+        <item>Latte</item>
+        <item>Strudel</item>
+        <item>Cannoli</item>
+        <item>Bear Claw</item>
     </string-array>
 </resources>

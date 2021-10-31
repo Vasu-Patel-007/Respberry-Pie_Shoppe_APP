@@ -16,28 +16,28 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button breakfastBtn = (Button)findViewById(R.id.breakfast);
-        Button coffeeBtn = (Button)findViewById(R.id.coffee);
+        //Breakfast menu
+        Spinner breakfastSpinner = (Spinner) findViewById(R.id.breakfast_menu);
 
-        breakfastBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, BreakfastActivity.class));
-            }
-        });
+        ArrayAdapter<String> breakfastAdapter = new ArrayAdapter<String>(MainActivity.this,
+                android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.breakfastNames));
+        breakfastAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        breakfastSpinner.setAdapter((breakfastAdapter));
 
-        coffeeBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, coffee.class));
-            }
-        });
+        //Coffee Menu
+        Spinner coffeeSpinner = (Spinner) findViewById(R.id.coffee_menu);
 
-        Spinner mySpinner = (Spinner) findViewById(R.id.Breakfast);
+        ArrayAdapter<String> coffeeAdapter = new ArrayAdapter<String>(MainActivity.this,
+                android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.coffeeNames));
+        coffeeAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        coffeeSpinner.setAdapter((coffeeAdapter));
 
-        ArrayAdapter<String> myAdapter = new ArrayAdapter<String>(MainActivity.this,
-                android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.names));
-        myAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        mySpinner.setAdapter((myAdapter));
+        //Pastries Menu
+        Spinner pastriesSpinner = (Spinner) findViewById(R.id.pastries_menu);
+
+        ArrayAdapter<String> pastriesAdapter = new ArrayAdapter<String>(MainActivity.this,
+                android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.pastriesNames));
+        pastriesAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        pastriesSpinner.setAdapter((pastriesAdapter));
     }
 }
