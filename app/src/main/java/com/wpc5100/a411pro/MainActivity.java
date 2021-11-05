@@ -5,9 +5,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.Spinner;
+import android.widget.TextView;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -15,6 +21,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        TextView desc = (TextView) findViewById(R.id.item);
+        ImageView amoogus1 = (ImageView) findViewById(R.id.amoogusImg);
 
         //Breakfast menu
         Spinner breakfastSpinner = (Spinner) findViewById(R.id.breakfast_menu);
@@ -23,6 +31,21 @@ public class MainActivity extends AppCompatActivity {
                 android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.breakfastNames));
         breakfastAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         breakfastSpinner.setAdapter((breakfastAdapter));
+
+        breakfastSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                desc.setText(breakfastSpinner.getSelectedItem().toString());
+                amoogus1.setImageResource(R.drawable.amoogus);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+
+
 
         //Coffee Menu
         Spinner coffeeSpinner = (Spinner) findViewById(R.id.coffee_menu);

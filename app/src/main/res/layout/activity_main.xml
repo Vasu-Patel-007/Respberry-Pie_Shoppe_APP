@@ -15,6 +15,16 @@
         android:paddingTop="40dp"
         android:orientation="vertical">
 
+        <TextView
+            android:id="@+id/item"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"/>
+
+        <ImageView
+            android:id="@+id/amoogusImg"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"/>
+
         <Spinner
             android:layout_width="200dp"
             android:layout_height="50dp"
