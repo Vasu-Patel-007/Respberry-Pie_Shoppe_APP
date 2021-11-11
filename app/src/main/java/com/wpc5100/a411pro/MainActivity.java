@@ -19,14 +19,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity {
-    // date_button
-    Button select_date;
-    TextView date;
-    DatePickerDialog date_picker_screen;
-    int year;
-    int month;
-    int day_of_month;
-    Calendar calendar;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,31 +47,8 @@ public class MainActivity extends AppCompatActivity {
             public void onNothingSelected(AdapterView<?> adapterView) {
 
             }
-
-
-
         });
-                    // code for date_picking_button_starts here
-            select_date = findViewById(R.id.btndate);
-            date = findViewById(R.id.selected_date);
 
-            select_date.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    calendar = Calendar.getInstance();
-                    year = calendar.get(Calendar.YEAR);
-                    month = calendar.get(Calendar.MONTH);
-                    day_of_month = calendar.get(Calendar.DAY_OF_MONTH);
-                    date_picker_screen = new DatePickerDialog(MainActivity.this, new DatePickerDialog.OnDateSetListener() {
-                        @Override
-                        public void onDateSet(DatePicker datePicker, int year, int month, int day) {
-                            date.setText(month + "/" + year);
-
-                        }
-                    }, 0,0,0);
-                    date_picker_screen.show();
-                }
-            });
 
         //Coffee Menu
         Spinner coffeeSpinner = (Spinner) findViewById(R.id.coffee_menu);

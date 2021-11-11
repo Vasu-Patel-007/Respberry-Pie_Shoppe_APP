@@ -52,17 +52,15 @@
             android:text="Select A Date"
             android:textColor="#FFFFFF"
             android:textSize="12sp"
-            android:textStyle="normal|bold" />
+            android:textStyle="normal|bold"/>
         <TextView
             android:id= "@+id/selected_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/btndate"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVerticle="true"
             android:layout_marginTop="10dp"
             android:textColor="@color/purple_700"
-            android:textSize="30dp"
+            android:textSize="30sp"
             android:textStyle="italic|bold"
             />
     <Button
