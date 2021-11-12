@@ -1,5 +1,6 @@
 package com.wpc5100.a411pro;
 
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
@@ -65,6 +66,20 @@ public class MainActivity extends AppCompatActivity {
                 android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.pastriesNames));
         pastriesAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         pastriesSpinner.setAdapter((pastriesAdapter));
+
+
+
+
+
+
+        //Go to checkout
+        Button checkoutBtn = (Button) findViewById(R.id.checkout);
+        checkoutBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, activity_payment.class));
+            }
+        });
 
 
     }
