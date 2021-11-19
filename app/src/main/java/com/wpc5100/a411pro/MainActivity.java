@@ -16,6 +16,7 @@ import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Calendar;
 
@@ -27,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         TextView desc = (TextView) findViewById(R.id.item);
-        ImageView amoogus1 = (ImageView) findViewById(R.id.amoogusImg);
+        ImageView image = (ImageView) findViewById(R.id.image);
 
         //Breakfast menu
         Spinner breakfastSpinner = (Spinner) findViewById(R.id.breakfast_menu);
@@ -37,11 +38,104 @@ public class MainActivity extends AppCompatActivity {
         breakfastAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         breakfastSpinner.setAdapter((breakfastAdapter));
 
+        double [] breakfast_price = {0,3.05,2.50,4.13,1.00,3.40,2.45}; // array for the breakfast's prices
+
         breakfastSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 desc.setText(breakfastSpinner.getSelectedItem().toString());
-                amoogus1.setImageResource(R.drawable.amoogus);
+
+                switch (i)
+                {
+                    // this switch statement will have different output depends on what user click on the spinner
+                    // for ex. user click on waffles, then it will run case 1 and it will print the price of waffles and set the image of waffles.
+                    case 1:
+                        image.setImageResource(R.drawable.waffles);
+                        int item_price_finder = i;
+                        double price = 0;
+                        TextView breakfast_price_text_view = (TextView) findViewById(R.id.breakfast_price);
+                        for(int n= 0; n<breakfast_price.length;n++)
+                        {
+                            if(n==i)
+                            {
+                                price = (double) Array.get(breakfast_price,i);
+                            }
+                        }
+
+                        breakfast_price_text_view.setText("$"+ price);
+                        break;
+                    case 2:
+                        image.setImageResource(R.drawable.frenchtoast);
+                        item_price_finder = i;
+                        price = 0;
+                        breakfast_price_text_view = (TextView) findViewById(R.id.breakfast_price);
+                        for(int n= 0; n<breakfast_price.length;n++)
+                        {
+                            if(n==i)
+                            {
+                                price = (double) Array.get(breakfast_price,i);
+                            }
+                        }
+                        breakfast_price_text_view.setText("$"+ price);
+                        break;
+                    case 3:
+                        image.setImageResource(R.drawable.pancake);
+                         item_price_finder = i;
+                         price = 0;
+                         breakfast_price_text_view = (TextView) findViewById(R.id.breakfast_price);
+                        for(int n= 0; n<breakfast_price.length;n++)
+                        {
+                            if(n==i)
+                            {
+                                price = (double) Array.get(breakfast_price,i);
+                            }
+                        }
+                        breakfast_price_text_view.setText("$"+ price);
+                        break;
+                    case 4:
+                        image.setImageResource(R.drawable.muffin);
+                         item_price_finder = i;
+                         price = 0;
+                         breakfast_price_text_view = (TextView) findViewById(R.id.breakfast_price);
+                        for(int n= 0; n<breakfast_price.length;n++)
+                        {
+                            if(n==i)
+                            {
+                                price = (double) Array.get(breakfast_price,i);
+                            }
+                        }
+                        breakfast_price_text_view.setText("$"+ price);
+                        break;
+                    case 5:
+                         image.setImageResource(R.drawable.bagel);
+                         item_price_finder = i;
+                         price = 0;
+                         breakfast_price_text_view = (TextView) findViewById(R.id.breakfast_price);
+                        for(int n= 0; n<breakfast_price.length;n++)
+                        {
+                            if(n==i)
+                            {
+                                price = (double) Array.get(breakfast_price,i);
+                            }
+                        }
+                        breakfast_price_text_view.setText("$"+ price);
+                        break;
+                    case 6:
+                         image.setImageResource(R.drawable.croissant);
+                         item_price_finder = i;
+                         price = 0;
+                         breakfast_price_text_view = (TextView) findViewById(R.id.breakfast_price);
+                        for(int n= 0; n<breakfast_price.length;n++)
+                        {
+                            if(n==i)
+                            {
+                                price = (double) Array.get(breakfast_price,i);
+                            }
+                        }
+                        breakfast_price_text_view.setText("$"+ price);
+                        break;
+
+                }
             }
 
             @Override
@@ -49,6 +143,8 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+
 
 
         //Coffee Menu

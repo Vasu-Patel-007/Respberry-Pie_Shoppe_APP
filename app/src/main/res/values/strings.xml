@@ -23,6 +23,7 @@
     <string name="coffee_menu">Coffee Menu</string>
 
     <string-array name="breakfastNames">
+        <item> Select a item </item>
         <item>Waffle</item>
         <item>Toast</item>
         <item>Pancake</item>
@@ -32,6 +33,7 @@
     </string-array>
 
     <string-array name="coffeeNames">
+        <item> Select a item </item>
         <item>Frappe</item>
         <item>Cappuccino</item>
         <item>Latte</item>
@@ -41,6 +43,7 @@
     </string-array>
 
     <string-array name="pastriesNames">
+        <item> Select a item </item>
         <item>Raspberry Pie</item>
         <item>Danish</item>
         <item>Strudel</item>
