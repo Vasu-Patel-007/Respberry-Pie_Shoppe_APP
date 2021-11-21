@@ -23,7 +23,7 @@
     <string name="coffee_menu">Coffee Menu</string>
 
     <string-array name="breakfastNames">
-        <item> Select a item </item>
+        <item>Breakfast Menu</item>
         <item>Waffle</item>
         <item>Toast</item>
         <item>Pancake</item>
@@ -33,7 +33,7 @@
     </string-array>
 
     <string-array name="coffeeNames">
-        <item> Select a item </item>
+        <item>Coffee Menu</item>
         <item>Frappe</item>
         <item>Cappuccino</item>
         <item>Latte</item>
@@ -43,11 +43,18 @@
     </string-array>
 
     <string-array name="pastriesNames">
-        <item> Select a item </item>
+        <item>Pastry Menu</item>
         <item>Raspberry Pie</item>
         <item>Danish</item>
         <item>Strudel</item>
         <item>Cannoli</item>
         <item>Bear Claw</item>
     </string-array>
+
+    <string name="firstName">First Name</string>
+    <string name="lastName">Last Name</string>
+    <string name="creditCardNum">Credit Card Number</string>
+    <string name="selectDateText">Select Date</string>
+    <string name="submitText">Submit</string>
+    <string name="checkoutText">Checkout</string>
 </resources>

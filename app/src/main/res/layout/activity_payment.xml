@@ -18,7 +18,7 @@
             android:layout_marginTop="25dp"
             android:layout_marginRight="50dp"
             android:ems="10"
-            android:hint="First Name"
+            android:hint="@string/firstName"
             android:inputType="text"
             android:selectAllOnFocus="true" />
 
@@ -30,17 +30,17 @@
             android:layout_marginTop="25dp"
             android:layout_marginRight="50dp"
             android:ems="10"
-            android:hint="Last Name"
+            android:hint="@string/lastName"
             android:inputType="text"
             android:selectAllOnFocus="true" />
 
         <EditText
             android:id="@+id/txt_credit_card_number"
-            android:layout_width="match_parent"
+            android:layout_width="170dp"
             android:layout_height="wrap_content"
             android:layout_marginRight="50dp"
             android:ems="10"
-            android:hint="Credit Card Number "
+            android:hint="@string/creditCardNum"
             android:inputType="textEmailAddress" />
 
         <Button
@@ -50,7 +50,7 @@
             android:layout_marginTop="10dp"
             android:background="#8000ff"
             android:minHeight="30dp"
-            android:text="Select A Date"
+            android:text="@string/selectDateText"
             android:textColor="#FFFFFF"
             android:textSize="12sp"
             android:textStyle="normal|bold"/>
@@ -71,7 +71,7 @@
             android:layout_marginTop="10dp"
             android:background="#8000ff"
             android:minHeight="30dp"
-            android:text="submit"
+            android:text="@string/submitText"
             android:textColor="#FFFFFF"
             android:textSize="12sp"
             android:textStyle="normal|bold" />

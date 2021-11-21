@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         breakfastAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         breakfastSpinner.setAdapter((breakfastAdapter));
 
-        double [] breakfast_price = {0,3.05,2.50,4.13,1.00,3.40,2.45}; // array for the breakfast's prices
+        double [] breakfast_price = {0.00,3.99,2.99,4.99,1.99,3.49,2.49}; // array for the breakfast's prices
 
         breakfastSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -155,7 +155,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
-
+                desc.setText(" ");
             }
         });
 
@@ -170,7 +170,7 @@ public class MainActivity extends AppCompatActivity {
         coffeeAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         coffeeSpinner.setAdapter((coffeeAdapter));
 
-        double [] coffee_price = {0,2.89,3.65,2.95,3.45,1.95,4.95}; // array for the coffee's prices
+        double [] coffee_price = {0.00,2.99,3.49,2.99,3.49,1.99,4.99}; // array for the coffee's prices
 
         coffeeSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -299,7 +299,7 @@ public class MainActivity extends AppCompatActivity {
         pastriesAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         pastriesSpinner.setAdapter((pastriesAdapter));
 
-        double [] pastries_price = {0,1.19,1.73,2.29,4.25,5.99}; // array for the pastries prices
+        double [] pastries_price = {0.00,1.99,2.49,2.99,4.49,5.99}; // array for the pastries prices
 
         pastriesSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
