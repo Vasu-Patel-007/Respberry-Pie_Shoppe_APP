@@ -7,6 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -26,14 +27,46 @@
         <ImageView
             android:id="@+id/image"
             android:layout_width="match_parent"
-            android:layout_height="200dp" />
+            android:layout_height="100dp" />
         <!-- this is for the price textview       -->
-        <TextView
 
+        <TextView
             android:id="@+id/breakfast_price"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_marginTop="10dp"/>
+
+        <LinearLayout
+            android:layout_width="304dp"
+            android:layout_height="40dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/plus1"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="increment"
+                android:text="+" />
+
+            <Button
+                android:id="@+id/minus1"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="decrement"
+                android:text="-" />
+
+            <TextView
+                android:id="@+id/counter1"
+                android:layout_width="225dp"
+                android:layout_height="69dp"
+                android:layout_weight="1"
+                android:text="0"
+                android:textAlignment="center"
+                android:textSize="30dp" />
+
+        </LinearLayout>
 
         <Spinner
             android:id="@+id/breakfast_menu"
@@ -42,6 +75,35 @@
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp" />
+        <LinearLayout
+            android:layout_width="304dp"
+            android:layout_height="40dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/plus2"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="+" />
+
+            <Button
+                android:id="@+id/minus2"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="-" />
+
+            <TextView
+                android:id="@+id/counter2"
+                android:layout_width="225dp"
+                android:layout_height="69dp"
+                android:layout_weight="1"
+                android:text="0"
+                android:textAlignment="center"
+                android:textSize="30dp" />
+
+        </LinearLayout>
 
         <Spinner
             android:id="@+id/coffee_menu"
@@ -50,6 +112,36 @@
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp" />
+
+        <LinearLayout
+            android:layout_width="304dp"
+            android:layout_height="40dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/plus3"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="+" />
+
+            <Button
+                android:id="@+id/minus3"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="-" />
+
+            <TextView
+                android:id="@+id/counter3"
+                android:layout_width="225dp"
+                android:layout_height="69dp"
+                android:layout_weight="1"
+                android:text="0"
+                android:textAlignment="center"
+                android:textSize="30dp" />
+
+        </LinearLayout>
 
         <Spinner
             android:id="@+id/pastries_menu"
@@ -70,14 +162,15 @@
             android:text="@string/budget_button"
             android:textSize="11sp"/>
 
-        <Button
-            android:id="@+id/checkout"
-            android:layout_width="100dp"
-            android:layout_height="80dp"
-            android:text="@string/checkoutText"
-            android:textSize="11sp"
-            android:layout_marginTop="7dp"/>
+            <Button
+                android:id="@+id/checkout"
+                android:layout_width="100dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="7dp"
+                android:text="@string/checkoutText"
+                android:textSize="11sp" />
         </LinearLayout>
+
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

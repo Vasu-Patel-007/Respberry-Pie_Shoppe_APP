@@ -15,6 +15,9 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import org.w3c.dom.Text;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
@@ -22,6 +25,8 @@ import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity {
 
+    TextView value;
+    int count = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +34,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         TextView desc = (TextView) findViewById(R.id.item);
         ImageView image = (ImageView) findViewById(R.id.image);
+
+        value = (TextView) findViewById(R.id.counter1); //Incrementer button
 
         //Breakfast menu
         Spinner breakfastSpinner = (Spinner) findViewById(R.id.breakfast_menu);
@@ -410,16 +417,38 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
+        //Spinner breakfastSpinner = (Spinner) findViewById(R.id.breakfast_menu);
+        //breakfastSpinner.setAdapter((breakfastAdapter));
+        //Button getItems = findViewById(R.id.minus1);
         //Go to checkout
         Button checkoutBtn = (Button) findViewById(R.id.checkout);
         checkoutBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MainActivity.this, activity_payment.class));
+                //int state = breakfastSpinner.getMeasuredState();
+                //Toast.makeText(getApplicationContext(),state,Toast.LENGTH_SHORT);
             }
         });
 
+    }
 
+    
+    public void increment(View v)
+    {
+        count++;
+        value.setText("" + count);
+    }
+    public void decrement(View v)
+    {
+        if(count <= 0)
+        {
+            count = 0;
+        }
+        else
+        {
+            count--;
+            value.setText("" + count);
+        }
     }
 }
