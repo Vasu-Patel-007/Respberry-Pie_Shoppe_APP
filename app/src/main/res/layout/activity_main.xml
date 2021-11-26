@@ -19,6 +19,12 @@
         tools:layout_editor_absoluteY="-87dp">
 
         <TextView
+            android:id="@+id/NewP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView" />
+
+        <TextView
             android:id="@+id/item"
             android:layout_width="match_parent"
             android:layout_height="40dp"

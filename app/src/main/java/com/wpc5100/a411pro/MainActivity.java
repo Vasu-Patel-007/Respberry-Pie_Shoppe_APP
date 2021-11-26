@@ -27,11 +27,13 @@ public class MainActivity extends AppCompatActivity {
 
     TextView value;
     int count = 0;
+    double newPrice;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        TextView p = (TextView) findViewById(R.id.NewP);
         TextView desc = (TextView) findViewById(R.id.item);
         ImageView image = (ImageView) findViewById(R.id.image);
 
@@ -81,10 +83,12 @@ public class MainActivity extends AppCompatActivity {
                             if(n==i)
                             {
                                 price = (double) Array.get(breakfast_price,i);
+                                newPrice = price * count;
                             }
-                        }
 
+                        }
                         breakfast_price_text_view.setText("$"+ price);
+                        p.setText("$" + newPrice);
                         break;
                     case 2:
                         image.setImageResource(R.drawable.frenchtoast);
@@ -434,12 +438,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     
-    public void increment(View v)
+    public int increment(View v)
     {
         count++;
         value.setText("" + count);
+        newPrice = newPrice * count;
+        return count;
     }
-    public void decrement(View v)
+    public int decrement(View v)
     {
         if(count <= 0)
         {
@@ -450,5 +456,6 @@ public class MainActivity extends AppCompatActivity {
             count--;
             value.setText("" + count);
         }
+        return count;
     }
 }
