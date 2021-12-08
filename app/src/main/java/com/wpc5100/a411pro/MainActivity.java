@@ -26,6 +26,8 @@ import java.util.Calendar;
 public class MainActivity extends AppCompatActivity {
 
     TextView value;
+    TextView value2;
+    TextView value3;
     int count = 0;
     double newPrice;
 
@@ -38,7 +40,17 @@ public class MainActivity extends AppCompatActivity {
         ImageView image = (ImageView) findViewById(R.id.image);
 
         value = (TextView) findViewById(R.id.counter1); //Incrementer button
+        value2 = (TextView) findViewById(R.id.counter2);
+        value3 = (TextView) findViewById(R.id.counter3);
 
+        Button plus1 = (Button) findViewById(R.id.plus1);
+        Button plus2 = (Button) findViewById(R.id.plus2);
+        Button plus3 = (Button) findViewById(R.id.plus3);
+
+        Button minus1 = (Button) findViewById(R.id.minus1);
+        Button minus2 = (Button) findViewById(R.id.minus2);
+        Button minus3 = (Button) findViewById(R.id.minus3
+        );
         //Breakfast menu
         Spinner breakfastSpinner = (Spinner) findViewById(R.id.breakfast_menu);
 
@@ -83,12 +95,32 @@ public class MainActivity extends AppCompatActivity {
                             if(n==i)
                             {
                                 price = (double) Array.get(breakfast_price,i);
-                                newPrice = price * count;
+
                             }
 
                         }
                         breakfast_price_text_view.setText("$"+ price);
-                        p.setText("$" + newPrice);
+
+                        double finalPrice = price;
+                        plus1.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                increment(v);
+                                newPrice = finalPrice * count;
+                                p.setText("$" + newPrice);
+                            }
+                        });
+
+                        minus1.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                decrement(v);
+                                newPrice = finalPrice * count;
+                                p.setText("$" + newPrice);
+                            }
+                        });
+
+
                         break;
                     case 2:
                         image.setImageResource(R.drawable.frenchtoast);
@@ -103,6 +135,26 @@ public class MainActivity extends AppCompatActivity {
                             }
                         }
                         breakfast_price_text_view.setText("$"+ price);
+                        finalPrice = price;
+
+                        plus1.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                increment(v);
+                                newPrice = finalPrice * count;
+                                p.setText("$" + newPrice);
+                            }
+                        });
+
+                        minus1.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                decrement(v);
+                                newPrice = finalPrice * count;
+                                p.setText("$" + newPrice);
+                            }
+                        });
+
                         break;
                     case 3:
                         image.setImageResource(R.drawable.pancake);
@@ -117,6 +169,27 @@ public class MainActivity extends AppCompatActivity {
                             }
                         }
                         breakfast_price_text_view.setText("$"+ price);
+
+                        finalPrice = price;
+
+                        plus1.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                increment(v);
+                                newPrice = finalPrice * count;
+                                p.setText("$" + newPrice);
+                            }
+                        });
+
+                        minus1.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                decrement(v);
+                                newPrice = finalPrice * count;
+                                p.setText("$" + newPrice);
+                            }
+                        });
+
                         break;
                     case 4:
                         image.setImageResource(R.drawable.muffin);
@@ -131,6 +204,27 @@ public class MainActivity extends AppCompatActivity {
                             }
                         }
                         breakfast_price_text_view.setText("$"+ price);
+
+                        finalPrice = price;
+
+                        plus1.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                increment(v);
+                                newPrice = finalPrice * count;
+                                p.setText("$" + newPrice);
+                            }
+                        });
+
+                        minus1.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                decrement(v);
+                                newPrice = finalPrice * count;
+                                p.setText("$" + newPrice);
+                            }
+                        });
+
                         break;
                     case 5:
                          image.setImageResource(R.drawable.bagel);
@@ -145,6 +239,27 @@ public class MainActivity extends AppCompatActivity {
                             }
                         }
                         breakfast_price_text_view.setText("$"+ price);
+
+                        finalPrice = price;
+
+                        plus1.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                increment(v);
+                                newPrice = finalPrice * count;
+                                p.setText("$" + newPrice);
+                            }
+                        });
+
+                        minus1.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                decrement(v);
+                                newPrice = finalPrice * count;
+                                p.setText("$" + newPrice);
+                            }
+                        });
+
                         break;
                     case 6:
                          image.setImageResource(R.drawable.croissant);
@@ -159,6 +274,27 @@ public class MainActivity extends AppCompatActivity {
                             }
                         }
                         breakfast_price_text_view.setText("$"+ price);
+
+                        finalPrice = price;
+
+                        plus1.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                increment(v);
+                                newPrice = finalPrice * count;
+                                p.setText("$" + newPrice);
+                            }
+                        });
+
+                        minus1.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                decrement(v);
+                                newPrice = finalPrice * count;
+                                p.setText("$" + newPrice);
+                            }
+                        });
+
                         break;
 
                 }
@@ -221,6 +357,25 @@ public class MainActivity extends AppCompatActivity {
                         }
 
                         breakfast_price_text_view.setText("$"+ price);
+                        double finalPrice = price;
+
+                        plus2.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                increment2(v);
+                                newPrice = finalPrice * count;
+                                p.setText("$" + newPrice);
+                            }
+                        });
+
+                        minus2.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                decrement2(v);
+                                newPrice = finalPrice * count;
+                                p.setText("$" + newPrice);
+                            }
+                        });
                         break;
                     case 2:
                         image.setImageResource(R.drawable.cappuccino);
@@ -235,6 +390,27 @@ public class MainActivity extends AppCompatActivity {
                             }
                         }
                         breakfast_price_text_view.setText("$"+ price);
+
+                        finalPrice = price;
+
+                        plus2.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                increment2(v);
+                                newPrice = finalPrice * count;
+                                p.setText("$" + newPrice);
+                            }
+                        });
+
+                        minus2.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                decrement2(v);
+                                newPrice = finalPrice * count;
+                                p.setText("$" + newPrice);
+                            }
+                        });
+
                         break;
                     case 3:
                         image.setImageResource(R.drawable.latte);
@@ -249,6 +425,27 @@ public class MainActivity extends AppCompatActivity {
                             }
                         }
                         breakfast_price_text_view.setText("$"+ price);
+
+                        finalPrice = price;
+
+                        plus2.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                increment2(v);
+                                newPrice = finalPrice * count;
+                                p.setText("$" + newPrice);
+                            }
+                        });
+
+                        minus2.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                decrement2(v);
+                                newPrice = finalPrice * count;
+                                p.setText("$" + newPrice);
+                            }
+                        });
+
                         break;
                     case 4:
                         image.setImageResource(R.drawable.espresso);
@@ -263,6 +460,27 @@ public class MainActivity extends AppCompatActivity {
                             }
                         }
                         breakfast_price_text_view.setText("$"+ price);
+
+                        finalPrice = price;
+
+                        plus2.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                increment2(v);
+                                newPrice = finalPrice * count;
+                                p.setText("$" + newPrice);
+                            }
+                        });
+
+                        minus2.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                decrement2(v);
+                                newPrice = finalPrice * count;
+                                p.setText("$" + newPrice);
+                            }
+                        });
+
                         break;
                     case 5:
                         image.setImageResource(R.drawable.doppio);
@@ -277,6 +495,27 @@ public class MainActivity extends AppCompatActivity {
                             }
                         }
                         breakfast_price_text_view.setText("$"+ price);
+
+                        finalPrice = price;
+
+                        plus2.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                increment2(v);
+                                newPrice = finalPrice * count;
+                                p.setText("$" + newPrice);
+                            }
+                        });
+
+                        minus2.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                decrement2(v);
+                                newPrice = finalPrice * count;
+                                p.setText("$" + newPrice);
+                            }
+                        });
+
                         break;
                     case 6:
                         image.setImageResource(R.drawable.arabica);
@@ -291,6 +530,27 @@ public class MainActivity extends AppCompatActivity {
                             }
                         }
                         breakfast_price_text_view.setText("$"+ price);
+
+                        finalPrice = price;
+
+                        plus2.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                increment2(v);
+                                newPrice = finalPrice * count;
+                                p.setText("$" + newPrice);
+                            }
+                        });
+
+                        minus2.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                decrement2(v);
+                                newPrice = finalPrice * count;
+                                p.setText("$" + newPrice);
+                            }
+                        });
+
                         break;
 
                 }
@@ -350,6 +610,27 @@ public class MainActivity extends AppCompatActivity {
                         }
 
                         breakfast_price_text_view.setText("$"+ price);
+
+                        double finalPrice = price;
+
+                        plus3.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                increment3(v);
+                                newPrice = finalPrice * count;
+                                p.setText("$" + newPrice);
+                            }
+                        });
+
+                        minus3.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                decrement3(v);
+                                newPrice = finalPrice * count;
+                                p.setText("$" + newPrice);
+                            }
+                        });
+
                         break;
                     case 2:
                         image.setImageResource(R.drawable.danish);
@@ -364,6 +645,27 @@ public class MainActivity extends AppCompatActivity {
                             }
                         }
                         breakfast_price_text_view.setText("$"+ price);
+
+                        finalPrice = price;
+
+                        plus3.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                increment3(v);
+                                newPrice = finalPrice * count;
+                                p.setText("$" + newPrice);
+                            }
+                        });
+
+                        minus3.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                decrement3(v);
+                                newPrice = finalPrice * count;
+                                p.setText("$" + newPrice);
+                            }
+                        });
+
                         break;
                     case 3:
                         image.setImageResource(R.drawable.strudel);
@@ -378,6 +680,27 @@ public class MainActivity extends AppCompatActivity {
                             }
                         }
                         breakfast_price_text_view.setText("$"+ price);
+
+                        finalPrice = price;
+
+                        plus3.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                increment3(v);
+                                newPrice = finalPrice * count;
+                                p.setText("$" + newPrice);
+                            }
+                        });
+
+                        minus3.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                decrement3(v);
+                                newPrice = finalPrice * count;
+                                p.setText("$" + newPrice);
+                            }
+                        });
+
                         break;
                     case 4:
                         image.setImageResource(R.drawable.cannoli);
@@ -392,6 +715,27 @@ public class MainActivity extends AppCompatActivity {
                             }
                         }
                         breakfast_price_text_view.setText("$"+ price);
+
+                        finalPrice = price;
+
+                        plus3.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                increment3(v);
+                                newPrice = finalPrice * count;
+                                p.setText("$" + newPrice);
+                            }
+                        });
+
+                        minus3.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                decrement3(v);
+                                newPrice = finalPrice * count;
+                                p.setText("$" + newPrice);
+                            }
+                        });
+
                         break;
                     case 5:
                         image.setImageResource(R.drawable.bearclaw);
@@ -406,6 +750,27 @@ public class MainActivity extends AppCompatActivity {
                             }
                         }
                         breakfast_price_text_view.setText("$"+ price);
+
+                        finalPrice = price;
+
+                        plus3.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                increment3(v);
+                                newPrice = finalPrice * count;
+                                p.setText("$" + newPrice);
+                            }
+                        });
+
+                        minus3.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                decrement3(v);
+                                newPrice = finalPrice * count;
+                                p.setText("$" + newPrice);
+                            }
+                        });
+
                         break;
 
                 }
@@ -437,7 +802,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    
+
     public int increment(View v)
     {
         count++;
@@ -455,6 +820,51 @@ public class MainActivity extends AppCompatActivity {
         {
             count--;
             value.setText("" + count);
+        }
+        return count;
+    }
+
+
+    public int increment2(View v)
+    {
+        count++;
+        value2.setText("" + count);
+        newPrice = newPrice * count;
+        return count;
+    }
+
+    public int decrement2(View v)
+    {
+        if(count <= 0)
+        {
+            count = 0;
+        }
+        else
+        {
+            count--;
+            value2.setText("" + count);
+        }
+        return count;
+    }
+
+    public int increment3(View v)
+    {
+        count++;
+        value3.setText("" + count);
+        newPrice = newPrice * count;
+        return count;
+    }
+
+    public int decrement3(View v)
+    {
+        if(count <= 0)
+        {
+            count = 0;
+        }
+        else
+        {
+            count--;
+            value3.setText("" + count);
         }
         return count;
     }
