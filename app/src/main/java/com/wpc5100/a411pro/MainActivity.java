@@ -30,6 +30,12 @@ public class MainActivity extends AppCompatActivity {
     TextView value3;
     int count = 0;
     double newPrice;
+    double total1;
+    double total2;
+    double total3;
+    TextView individual_price1;
+    TextView individual_price2;
+    TextView individual_price3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,8 +55,14 @@ public class MainActivity extends AppCompatActivity {
 
         Button minus1 = (Button) findViewById(R.id.minus1);
         Button minus2 = (Button) findViewById(R.id.minus2);
-        Button minus3 = (Button) findViewById(R.id.minus3
-        );
+        Button minus3 = (Button) findViewById(R.id.minus3);
+
+        Button total_button = (Button) findViewById(R.id.total);
+
+        individual_price1 = (TextView) findViewById(R.id.price_for_1);
+        individual_price2 = (TextView) findViewById(R.id.price_for_2);
+        individual_price3 = (TextView) findViewById(R.id.price_for_3);
+
         //Breakfast menu
         Spinner breakfastSpinner = (Spinner) findViewById(R.id.breakfast_menu);
 
@@ -60,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
         breakfastSpinner.setAdapter((breakfastAdapter));
 
         double [] breakfast_price = {0.00,3.99,2.99,4.99,1.99,3.49,2.49}; // array for the breakfast's prices
-
+        p.setText("$0");
         breakfastSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
@@ -107,7 +119,8 @@ public class MainActivity extends AppCompatActivity {
                             public void onClick(View v) {
                                 increment(v);
                                 newPrice = finalPrice * count;
-                                p.setText("$" + newPrice);
+                                individual_price1.setText("  $" + newPrice);
+                                total1 = newPrice;
                             }
                         });
 
@@ -116,7 +129,8 @@ public class MainActivity extends AppCompatActivity {
                             public void onClick(View v) {
                                 decrement(v);
                                 newPrice = finalPrice * count;
-                                p.setText("$" + newPrice);
+                                individual_price1.setText("  $" + newPrice);
+                                total1 = newPrice;
                             }
                         });
 
@@ -134,7 +148,7 @@ public class MainActivity extends AppCompatActivity {
                                 price = (double) Array.get(breakfast_price,i);
                             }
                         }
-                        breakfast_price_text_view.setText("$"+ price);
+                        breakfast_price_text_view.setText("  $"+ price);
                         finalPrice = price;
 
                         plus1.setOnClickListener(new View.OnClickListener() {
@@ -142,7 +156,8 @@ public class MainActivity extends AppCompatActivity {
                             public void onClick(View v) {
                                 increment(v);
                                 newPrice = finalPrice * count;
-                                p.setText("$" + newPrice);
+                                individual_price1.setText("  $" + newPrice);
+                                total1 = newPrice;
                             }
                         });
 
@@ -151,7 +166,8 @@ public class MainActivity extends AppCompatActivity {
                             public void onClick(View v) {
                                 decrement(v);
                                 newPrice = finalPrice * count;
-                                p.setText("$" + newPrice);
+                                individual_price1.setText("  $" + newPrice);
+                                total1 = newPrice;
                             }
                         });
 
@@ -177,7 +193,8 @@ public class MainActivity extends AppCompatActivity {
                             public void onClick(View v) {
                                 increment(v);
                                 newPrice = finalPrice * count;
-                                p.setText("$" + newPrice);
+                                individual_price1.setText("  $" + newPrice);
+                                total1 = newPrice;
                             }
                         });
 
@@ -186,7 +203,8 @@ public class MainActivity extends AppCompatActivity {
                             public void onClick(View v) {
                                 decrement(v);
                                 newPrice = finalPrice * count;
-                                p.setText("$" + newPrice);
+                                individual_price1.setText("  $" + newPrice);
+                                total1 = newPrice;
                             }
                         });
 
@@ -212,7 +230,8 @@ public class MainActivity extends AppCompatActivity {
                             public void onClick(View v) {
                                 increment(v);
                                 newPrice = finalPrice * count;
-                                p.setText("$" + newPrice);
+                                individual_price1.setText("  $" + newPrice);
+                                total1 = newPrice;
                             }
                         });
 
@@ -221,7 +240,8 @@ public class MainActivity extends AppCompatActivity {
                             public void onClick(View v) {
                                 decrement(v);
                                 newPrice = finalPrice * count;
-                                p.setText("$" + newPrice);
+                                individual_price1.setText("  $" + newPrice);
+                                total1 = newPrice;
                             }
                         });
 
@@ -247,7 +267,8 @@ public class MainActivity extends AppCompatActivity {
                             public void onClick(View v) {
                                 increment(v);
                                 newPrice = finalPrice * count;
-                                p.setText("$" + newPrice);
+                                individual_price1.setText("  $" + newPrice);
+                                total1 = newPrice;
                             }
                         });
 
@@ -256,7 +277,8 @@ public class MainActivity extends AppCompatActivity {
                             public void onClick(View v) {
                                 decrement(v);
                                 newPrice = finalPrice * count;
-                                p.setText("$" + newPrice);
+                                individual_price1.setText("  $" + newPrice);
+                                total1 = newPrice;
                             }
                         });
 
@@ -282,7 +304,8 @@ public class MainActivity extends AppCompatActivity {
                             public void onClick(View v) {
                                 increment(v);
                                 newPrice = finalPrice * count;
-                                p.setText("$" + newPrice);
+                                individual_price1.setText("  $" + newPrice);
+                                total1 = newPrice;
                             }
                         });
 
@@ -291,7 +314,8 @@ public class MainActivity extends AppCompatActivity {
                             public void onClick(View v) {
                                 decrement(v);
                                 newPrice = finalPrice * count;
-                                p.setText("$" + newPrice);
+                                individual_price1.setText("  $" + newPrice);
+                                total1 = newPrice;
                             }
                         });
 
@@ -364,7 +388,8 @@ public class MainActivity extends AppCompatActivity {
                             public void onClick(View v) {
                                 increment2(v);
                                 newPrice = finalPrice * count;
-                                p.setText("$" + newPrice);
+                                individual_price2.setText("  $" + newPrice);
+                                total2 = newPrice;
                             }
                         });
 
@@ -373,7 +398,8 @@ public class MainActivity extends AppCompatActivity {
                             public void onClick(View v) {
                                 decrement2(v);
                                 newPrice = finalPrice * count;
-                                p.setText("$" + newPrice);
+                                individual_price2.setText("  $" + newPrice);
+                                total2 = newPrice;
                             }
                         });
                         break;
@@ -398,7 +424,8 @@ public class MainActivity extends AppCompatActivity {
                             public void onClick(View v) {
                                 increment2(v);
                                 newPrice = finalPrice * count;
-                                p.setText("$" + newPrice);
+                                individual_price2.setText("  $" + newPrice);
+                                total2 = newPrice;
                             }
                         });
 
@@ -407,7 +434,8 @@ public class MainActivity extends AppCompatActivity {
                             public void onClick(View v) {
                                 decrement2(v);
                                 newPrice = finalPrice * count;
-                                p.setText("$" + newPrice);
+                                individual_price2.setText("  $" + newPrice);
+                                total2 = newPrice;
                             }
                         });
 
@@ -433,7 +461,8 @@ public class MainActivity extends AppCompatActivity {
                             public void onClick(View v) {
                                 increment2(v);
                                 newPrice = finalPrice * count;
-                                p.setText("$" + newPrice);
+                                individual_price2.setText("  $" + newPrice);
+                                total2 = newPrice;
                             }
                         });
 
@@ -442,7 +471,8 @@ public class MainActivity extends AppCompatActivity {
                             public void onClick(View v) {
                                 decrement2(v);
                                 newPrice = finalPrice * count;
-                                p.setText("$" + newPrice);
+                                individual_price2.setText("  $" + newPrice);
+                                total2 = newPrice;
                             }
                         });
 
@@ -468,7 +498,8 @@ public class MainActivity extends AppCompatActivity {
                             public void onClick(View v) {
                                 increment2(v);
                                 newPrice = finalPrice * count;
-                                p.setText("$" + newPrice);
+                                individual_price2.setText("  $" + newPrice);
+                                total2 = newPrice;
                             }
                         });
 
@@ -477,7 +508,8 @@ public class MainActivity extends AppCompatActivity {
                             public void onClick(View v) {
                                 decrement2(v);
                                 newPrice = finalPrice * count;
-                                p.setText("$" + newPrice);
+                                individual_price2.setText("  $" + newPrice);
+                                total2 = newPrice;
                             }
                         });
 
@@ -503,7 +535,8 @@ public class MainActivity extends AppCompatActivity {
                             public void onClick(View v) {
                                 increment2(v);
                                 newPrice = finalPrice * count;
-                                p.setText("$" + newPrice);
+                                individual_price2.setText("  $" + newPrice);
+                                total2 = newPrice;
                             }
                         });
 
@@ -512,7 +545,8 @@ public class MainActivity extends AppCompatActivity {
                             public void onClick(View v) {
                                 decrement2(v);
                                 newPrice = finalPrice * count;
-                                p.setText("$" + newPrice);
+                                individual_price2.setText("  $" + newPrice);
+                                total2 = newPrice;
                             }
                         });
 
@@ -538,7 +572,8 @@ public class MainActivity extends AppCompatActivity {
                             public void onClick(View v) {
                                 increment2(v);
                                 newPrice = finalPrice * count;
-                                p.setText("$" + newPrice);
+                                individual_price2.setText("  $" + newPrice);
+                                total2 = newPrice;
                             }
                         });
 
@@ -547,7 +582,8 @@ public class MainActivity extends AppCompatActivity {
                             public void onClick(View v) {
                                 decrement2(v);
                                 newPrice = finalPrice * count;
-                                p.setText("$" + newPrice);
+                                individual_price2.setText("  $" + newPrice);
+                                total2 = newPrice;
                             }
                         });
 
@@ -618,7 +654,8 @@ public class MainActivity extends AppCompatActivity {
                             public void onClick(View v) {
                                 increment3(v);
                                 newPrice = finalPrice * count;
-                                p.setText("$" + newPrice);
+                                individual_price3.setText("  $" + newPrice);
+                                total3 = newPrice;
                             }
                         });
 
@@ -627,7 +664,8 @@ public class MainActivity extends AppCompatActivity {
                             public void onClick(View v) {
                                 decrement3(v);
                                 newPrice = finalPrice * count;
-                                p.setText("$" + newPrice);
+                                individual_price3.setText("  $" + newPrice);
+                                total3 = newPrice;
                             }
                         });
 
@@ -653,7 +691,8 @@ public class MainActivity extends AppCompatActivity {
                             public void onClick(View v) {
                                 increment3(v);
                                 newPrice = finalPrice * count;
-                                p.setText("$" + newPrice);
+                                individual_price3.setText("  $" + newPrice);
+                                total3 = newPrice;
                             }
                         });
 
@@ -662,7 +701,8 @@ public class MainActivity extends AppCompatActivity {
                             public void onClick(View v) {
                                 decrement3(v);
                                 newPrice = finalPrice * count;
-                                p.setText("$" + newPrice);
+                                individual_price3.setText("  $" + newPrice);
+                                total3 = newPrice;
                             }
                         });
 
@@ -688,7 +728,8 @@ public class MainActivity extends AppCompatActivity {
                             public void onClick(View v) {
                                 increment3(v);
                                 newPrice = finalPrice * count;
-                                p.setText("$" + newPrice);
+                                individual_price3.setText("  $" + newPrice);
+                                total3 = newPrice;
                             }
                         });
 
@@ -697,7 +738,8 @@ public class MainActivity extends AppCompatActivity {
                             public void onClick(View v) {
                                 decrement3(v);
                                 newPrice = finalPrice * count;
-                                p.setText("$" + newPrice);
+                                individual_price3.setText("  $" + newPrice);
+                                total3 = newPrice;
                             }
                         });
 
@@ -723,7 +765,8 @@ public class MainActivity extends AppCompatActivity {
                             public void onClick(View v) {
                                 increment3(v);
                                 newPrice = finalPrice * count;
-                                p.setText("$" + newPrice);
+                                individual_price3.setText("  $" + newPrice);
+                                total3 = newPrice;
                             }
                         });
 
@@ -732,7 +775,8 @@ public class MainActivity extends AppCompatActivity {
                             public void onClick(View v) {
                                 decrement3(v);
                                 newPrice = finalPrice * count;
-                                p.setText("$" + newPrice);
+                                individual_price3.setText("  $" + newPrice);
+                                total3 = newPrice;
                             }
                         });
 
@@ -758,7 +802,8 @@ public class MainActivity extends AppCompatActivity {
                             public void onClick(View v) {
                                 increment3(v);
                                 newPrice = finalPrice * count;
-                                p.setText("$" + newPrice);
+                                individual_price3.setText("  $" + newPrice);
+                                total3 = newPrice;
                             }
                         });
 
@@ -767,7 +812,8 @@ public class MainActivity extends AppCompatActivity {
                             public void onClick(View v) {
                                 decrement3(v);
                                 newPrice = finalPrice * count;
-                                p.setText("$" + newPrice);
+                                individual_price3.setText("  $" + newPrice);
+                                total3 = newPrice;
                             }
                         });
 
@@ -807,6 +853,14 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, activity_budget.class));
             }
         });
+
+        total_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                p.setText("$"+(total1+total2+total3));
+            }
+        });
+
     }
 
 
