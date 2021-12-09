@@ -800,6 +800,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button budgetBtn = (Button) findViewById(R.id.budget);
+        budgetBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, activity_budget.class));
+            }
+        });
     }
 
 

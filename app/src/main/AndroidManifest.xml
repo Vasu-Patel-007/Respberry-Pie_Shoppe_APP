@@ -10,9 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.411Pro">
         <activity
+            android:name=".activity_budget"
+            android:exported="true"
+            android:label="Buy Based On Your Budget"/>
+        <activity
             android:name=".activity_payment"
             android:exported="true"
-            android:label="Hope to See You Again Soon!"/>
+            android:label="Hope to See You Again Soon!" />
         <activity
             android:name=".coffee"
             android:exported="true"
