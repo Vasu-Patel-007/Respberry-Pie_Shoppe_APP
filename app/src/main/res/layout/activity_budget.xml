@@ -16,9 +16,26 @@
             android:layout_height="wrap_content"
             android:inputType="number"
             android:hint="@string/enterBudget"
-            android:layout_marginTop="30dp">
+            android:layout_marginTop="30dp"
+            android:id="@+id/enter_budget">
 
         </EditText>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="50dp"
+            android:id="@+id/budget_items">
+
+        </TextView>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/budget_btn"
+            android:text="Get Budget">
+
+        </Button>
 
     </LinearLayout>
 
