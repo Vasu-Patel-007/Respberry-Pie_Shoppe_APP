@@ -39,7 +39,7 @@ public class activity_payment extends AppCompatActivity {
                     new DatePickerDialog.OnDateSetListener() {
                         @Override
                         public void onDateSet(DatePicker datePicker, int year, int month, int day) {
-                            date.setText(month + "/" + year);
+                            date.setText((month +1) + "/" + year);
                         }
                     }, year, month, dayofMonth);
             datePickerDialog.show();

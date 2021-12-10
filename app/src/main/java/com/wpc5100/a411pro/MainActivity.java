@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         TextView p = (TextView) findViewById(R.id.NewP);
-        TextView desc = (TextView) findViewById(R.id.item);
+        //TextView desc = (TextView) findViewById(R.id.item);
         ImageView image = (ImageView) findViewById(R.id.image);
 
         value = (TextView) findViewById(R.id.counter1); //Incrementer button
@@ -76,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
         breakfastSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                desc.setText(breakfastSpinner.getSelectedItem().toString());
+                //desc.setText(breakfastSpinner.getSelectedItem().toString());
 
                 switch (i)
                 {
@@ -326,7 +326,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
-                desc.setText(" ");
+                //desc.setText(" ");
             }
         });
 
@@ -346,7 +346,7 @@ public class MainActivity extends AppCompatActivity {
         coffeeSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                desc.setText(coffeeSpinner.getSelectedItem().toString());
+                //desc.setText(coffeeSpinner.getSelectedItem().toString());
 
                 switch (i)
                 {
@@ -611,7 +611,7 @@ public class MainActivity extends AppCompatActivity {
         pastriesSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                desc.setText(pastriesSpinner.getSelectedItem().toString());
+                //desc.setText(pastriesSpinner.getSelectedItem().toString());
 
                 switch (i)
                 {

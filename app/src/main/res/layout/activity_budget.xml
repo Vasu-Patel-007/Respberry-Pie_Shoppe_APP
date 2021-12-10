@@ -14,7 +14,7 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="number"
+            android:inputType="numberDecimal"
             android:hint="@string/enterBudget"
             android:layout_marginTop="30dp"
             android:id="@+id/enter_budget">
@@ -34,6 +34,13 @@
             android:layout_height="wrap_content"
             android:id="@+id/budget_btn"
             android:text="Get Budget">
+
+        </Button>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add to Cart">
 
         </Button>
 
