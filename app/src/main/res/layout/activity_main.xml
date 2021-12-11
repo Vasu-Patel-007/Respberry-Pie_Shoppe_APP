@@ -18,18 +18,20 @@
         tools:layout_editor_absoluteX="-94dp"
         tools:layout_editor_absoluteY="-87dp">
 
+        <!--View for total order price -->
         <TextView
             android:id="@+id/NewP"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="TextView" />
 
+        <!-- Image view of currently selected item -->
         <ImageView
             android:id="@+id/image"
             android:layout_width="match_parent"
             android:layout_height="100dp" />
-        <!-- this is for the price textview       -->
 
+        <!-- this is for the price textview       -->
         <TextView
             android:id="@+id/breakfast_price"
             android:layout_width="match_parent"
@@ -41,6 +43,7 @@
             android:layout_height="40dp"
             android:orientation="horizontal">
 
+            <!--Decrement breakfast qty -->
             <Button
                 android:id="@+id/minus1"
                 android:layout_width="40dp"
@@ -49,6 +52,7 @@
                 android:onClick="decrement"
                 android:text="-" />
 
+            <!-- current breakfast qty -->
             <TextView
                 android:id="@+id/counter1"
                 android:layout_width="50dp"
@@ -58,6 +62,7 @@
                 android:textAlignment="center"
                 android:textSize="30dp" />
 
+            <!-- Increment breakfast qty-->
             <Button
                 android:id="@+id/plus1"
                 android:layout_width="40dp"
@@ -66,18 +71,18 @@
                 android:onClick="increment"
                 android:text="+" />
 
+            <!-- Current breakfst price-->
             <TextView
                 android:id="@+id/price_for_1"
                 android:layout_width="170dp"
                 android:layout_height="69dp"
                 android:layout_weight="1"
                 android:text="0"
-                android:textSize="20dp"
-
-                />
+                android:textSize="20sp" />
 
         </LinearLayout>
 
+        <!-- Breakfast choices-->
         <Spinner
             android:id="@+id/breakfast_menu"
             android:layout_width="200dp"
@@ -90,6 +95,7 @@
             android:layout_height="40dp"
             android:orientation="horizontal">
 
+            <!-- Decrement coffee qty-->
             <Button
                 android:id="@+id/minus2"
                 android:layout_width="40dp"
@@ -97,6 +103,7 @@
                 android:layout_weight="1"
                 android:text="-" />
 
+            <!--current coffee qty-->
             <TextView
                 android:id="@+id/counter2"
                 android:layout_width="50dp"
@@ -106,6 +113,7 @@
                 android:textAlignment="center"
                 android:textSize="30dp" />
 
+            <!--increment coffee qty-->
             <Button
                 android:id="@+id/plus2"
                 android:layout_width="40dp"
@@ -113,8 +121,7 @@
                 android:layout_weight="1"
                 android:text="+" />
 
-
-
+            <!-- current coffee price-->
             <TextView
                 android:id="@+id/price_for_2"
                 android:layout_width="170dp"
@@ -125,6 +132,7 @@
 
         </LinearLayout>
 
+        <!--coffee menu items-->
         <Spinner
             android:id="@+id/coffee_menu"
             android:layout_width="200dp"
@@ -138,12 +146,14 @@
             android:layout_height="40dp"
             android:orientation="horizontal">
 
+            <!-- decrement pastry qty-->
             <Button
                 android:id="@+id/minus3"
                 android:layout_width="40dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="-" />
+            <!--current pastry qty-->
             <TextView
                 android:id="@+id/counter3"
                 android:layout_width="50dp"
@@ -152,6 +162,7 @@
                 android:text="0"
                 android:textAlignment="center"
                 android:textSize="30dp" />
+            <!-- increment pastry qty-->
             <Button
                 android:id="@+id/plus3"
                 android:layout_width="40dp"
@@ -159,6 +170,7 @@
                 android:layout_weight="1"
                 android:text="+" />
 
+            <!--current pastry price-->
             <TextView
                 android:id="@+id/price_for_3"
                 android:layout_width="170dp"
@@ -167,10 +179,9 @@
                 android:text="0"
                 android:textSize="20dp" />
 
-
-
         </LinearLayout>
 
+        <!-- pastry menu items-->
         <Spinner
             android:id="@+id/pastries_menu"
             android:layout_width="200dp"
@@ -179,6 +190,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp" />
 
+        <!-- calculate total button-->
         <Button
             android:id="@+id/total"
             android:layout_width="200dp"
@@ -189,6 +201,7 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
+            <!--go to budget page button-->
         <Button
             android:id="@+id/budget"
             android:layout_width="100dp"
@@ -196,6 +209,7 @@
             android:text="@string/budget_button"
             android:textSize="11sp"/>
 
+            <!-- go to checkout page button -->
             <Button
                 android:id="@+id/checkout"
                 android:layout_width="100dp"

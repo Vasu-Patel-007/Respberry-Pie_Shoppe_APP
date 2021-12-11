@@ -7,6 +7,9 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
+    <!--THIS ACTIVITY IS NOT IN USE -->
+
     <GridLayout
         android:id="@+id/breakfast_layout"
         android:layout_width="wrap_content"

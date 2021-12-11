@@ -11,6 +11,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+        <!--Budget input -->
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -21,6 +22,7 @@
 
         </EditText>
 
+        <!--View for items in budget -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="200dp"
@@ -29,6 +31,7 @@
 
         </TextView>
 
+        <!--Get budget items button -->
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -37,6 +40,7 @@
 
         </Button>
 
+        <!--Add items to cart button -->
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

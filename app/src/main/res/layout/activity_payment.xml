@@ -11,6 +11,7 @@
         android:paddingEnd="100dp"
         android:paddingTop="40dp"
         android:orientation="vertical">
+        <!--enter first name-->
         <EditText
             android:id="@+id/txt_first_name"
             android:layout_width="match_parent"
@@ -22,8 +23,8 @@
             android:inputType="text"
             android:selectAllOnFocus="true" />
 
+        <!--enter last name-->
         <EditText
-
             android:id="@+id/txt_last_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -34,6 +35,7 @@
             android:inputType="text"
             android:selectAllOnFocus="true" />
 
+        <!--enter CCN -->
         <EditText
             android:id="@+id/txt_credit_card_number"
             android:layout_width="170dp"
@@ -43,6 +45,7 @@
             android:hint="@string/creditCardNum"
             android:inputType="textEmailAddress" />
 
+        <!--select date button-->
         <Button
             android:id="@+id/btnDate"
             android:layout_width="wrap_content"
@@ -54,6 +57,7 @@
             android:textColor="#FFFFFF"
             android:textSize="12sp"
             android:textStyle="normal|bold"/>
+        <!-- textview for chosen date from abov-->
         <TextView
             android:id= "@+id/selected_date"
             android:layout_width="wrap_content"
@@ -62,8 +66,9 @@
             android:layout_marginTop="10dp"
             android:textColor="@color/purple_700"
             android:textSize="30sp"
-            android:textStyle="italic|bold"
-            />
+            android:textStyle="italic|bold" />
+
+        <!--submit order transaction button-->
         <Button
             android:id="@+id/btnSend"
             android:layout_width="wrap_content"
@@ -76,6 +81,7 @@
             android:textSize="12sp"
             android:textStyle="normal|bold" />
 
+        <!--textview for order result details-->
         <TextView
             android:id="@+id/resultView"
             android:layout_width="wrap_content"

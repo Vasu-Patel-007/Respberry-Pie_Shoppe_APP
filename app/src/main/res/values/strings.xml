@@ -1,11 +1,10 @@
 <resources>
     <string name="app_name">411Pro</string>
 
-    <string name="breakfast_button">Breakfast</string>
-    <string name="coffee_button">Coffee</string>
-    <string name="pastries_button">Pastries</string>
+    <!--budget button-->
     <string name="budget_button">Budget</string>
 
+    <!--NOT USED-->
     <string name="waffle_button">Waffle</string>
     <string name="toast_button">Toast</string>
     <string name="pancake_button">Pancake</string>
@@ -14,6 +13,7 @@
     <string name="croissant_button">Croissant</string>
     <string name="breakfast_menu">Breakfast Menu</string>
 
+    <!--NOT USED-->
     <string name="frappe_button">Frappe</string>
     <string name="cappuccino_button">Cappuccino</string>
     <string name="latte_button">Latte</string>
@@ -22,6 +22,7 @@
     <string name="arabica_button">Arabica</string>
     <string name="coffee_menu">Coffee Menu</string>
 
+    <!--breakfast names-->
     <string-array name="breakfastNames">
         <item>Breakfast Menu</item>
         <item>Waffle</item>
@@ -32,6 +33,7 @@
         <item>Croissant</item>
     </string-array>
 
+    <!--coffee names-->
     <string-array name="coffeeNames">
         <item>Coffee Menu</item>
         <item>Frappe</item>
@@ -42,6 +44,7 @@
         <item>Arabica</item>
     </string-array>
 
+    <!--pastry names-->
     <string-array name="pastriesNames">
         <item>Pastry Menu</item>
         <item>Raspberry Pie</item>
@@ -51,6 +54,7 @@
         <item>Bear Claw</item>
     </string-array>
 
+    <!--payment details-->
     <string name="firstName">First Name</string>
     <string name="lastName">Last Name</string>
     <string name="creditCardNum">Credit Card Number</string>
@@ -58,5 +62,6 @@
     <string name="submitText">Submit</string>
     <string name="checkoutText">Checkout</string>
 
+    <!--enter budget-->
     <string name="enterBudget">Enter Budget Here</string>
 </resources>

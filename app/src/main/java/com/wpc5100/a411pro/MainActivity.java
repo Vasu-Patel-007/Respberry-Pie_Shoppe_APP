@@ -25,6 +25,7 @@ import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity {
 
+    //Global variables
     TextView value;
     TextView value2;
     TextView value3;
@@ -41,36 +42,43 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        //Views for image and item name
         TextView p = (TextView) findViewById(R.id.NewP);
-        //TextView desc = (TextView) findViewById(R.id.item);
         ImageView image = (ImageView) findViewById(R.id.image);
 
+        //Values for incrementer button
         value = (TextView) findViewById(R.id.counter1); //Incrementer button
         value2 = (TextView) findViewById(R.id.counter2);
         value3 = (TextView) findViewById(R.id.counter3);
 
+        //Buttons for incrementing quantity
         Button plus1 = (Button) findViewById(R.id.plus1);
         Button plus2 = (Button) findViewById(R.id.plus2);
         Button plus3 = (Button) findViewById(R.id.plus3);
 
+        //Buttons for decrementing quantity
         Button minus1 = (Button) findViewById(R.id.minus1);
         Button minus2 = (Button) findViewById(R.id.minus2);
         Button minus3 = (Button) findViewById(R.id.minus3);
 
+        //Button to calculate order total
         Button total_button = (Button) findViewById(R.id.total);
 
+        //Text for prices of items from each category
         individual_price1 = (TextView) findViewById(R.id.price_for_1);
         individual_price2 = (TextView) findViewById(R.id.price_for_2);
         individual_price3 = (TextView) findViewById(R.id.price_for_3);
 
-        //Breakfast menu
+        //Breakfast menu spinner
         Spinner breakfastSpinner = (Spinner) findViewById(R.id.breakfast_menu);
 
+        //Breakfast spinner adapter
         ArrayAdapter<String> breakfastAdapter = new ArrayAdapter<String>(MainActivity.this,
                 android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.breakfastNames));
         breakfastAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         breakfastSpinner.setAdapter((breakfastAdapter));
 
+        //Array for breakfast prices
         double [] breakfast_price = {0.00,3.99,2.99,4.99,1.99,3.49,2.49}; // array for the breakfast's prices
         p.setText("$0");
         breakfastSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -78,14 +86,17 @@ public class MainActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 //desc.setText(breakfastSpinner.getSelectedItem().toString());
 
+                //Loop through all breakfasts in a switch
                 switch (i)
                 {
                     // this switch statement will have different output depends on what user click on the spinner
                     // for ex. user click on waffles, then it will run case 1 and it will print the price of waffles and set the image of waffles.
                     case 0:
+                        //Dsiplay image of first item
                         image.setImageResource(R.drawable.raspberry_pie_logo);
                         int item_price_finder = i;
                         double price = 0;
+                        //Set individual item price
                         TextView breakfast_price_text_view = (TextView) findViewById(R.id.breakfast_price);
                         for(int n= 0; n<breakfast_price.length;n++)
                         {
@@ -96,6 +107,7 @@ public class MainActivity extends AppCompatActivity {
                         }
 
                         breakfast_price_text_view.setText("$"+ price);
+                        //REPEAT ABOVE COMMENTS FOR EACH CASE
                         break;
                     case 1:
                         image.setImageResource(R.drawable.waffles);
@@ -326,14 +338,14 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
-                //desc.setText(" ");
+                //Do nothing
             }
         });
 
 
 
 
-        //Coffee Menu
+        //Coffee Menu spinner. Same logic as breakfast stuff above
         Spinner coffeeSpinner = (Spinner) findViewById(R.id.coffee_menu);
 
         ArrayAdapter<String> coffeeAdapter = new ArrayAdapter<String>(MainActivity.this,
@@ -598,7 +610,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        //Pastries Menu
+        //Pastries Menu. Same logic as categories above
         Spinner pastriesSpinner = (Spinner) findViewById(R.id.pastries_menu);
 
         ArrayAdapter<String> pastriesAdapter = new ArrayAdapter<String>(MainActivity.this,
@@ -835,25 +847,29 @@ public class MainActivity extends AppCompatActivity {
         //Spinner breakfastSpinner = (Spinner) findViewById(R.id.breakfast_menu);
         //breakfastSpinner.setAdapter((breakfastAdapter));
         //Button getItems = findViewById(R.id.minus1);
-        //Go to checkout
+
+
+        //Go to checkout page
         Button checkoutBtn = (Button) findViewById(R.id.checkout);
         checkoutBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //Load checkout activity
                 startActivity(new Intent(MainActivity.this, activity_payment.class));
-                //int state = breakfastSpinner.getMeasuredState();
-                //Toast.makeText(getApplicationContext(),state,Toast.LENGTH_SHORT);
             }
         });
 
+        //Go to budget page
         Button budgetBtn = (Button) findViewById(R.id.budget);
         budgetBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //Load budget activity
                 startActivity(new Intent(MainActivity.this, activity_budget.class));
             }
         });
 
+        //Listener for calculating total
         total_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -864,6 +880,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    //Increment method
     public int increment(View v)
     {
         count++;
@@ -871,6 +888,7 @@ public class MainActivity extends AppCompatActivity {
         newPrice = newPrice * count;
         return count;
     }
+    //Decrement method
     public int decrement(View v)
     {
         if(count <= 0)

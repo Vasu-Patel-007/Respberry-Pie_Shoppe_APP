@@ -7,6 +7,7 @@ import android.os.Bundle;
 public class BreakfastActivity extends AppCompatActivity {
 
     @Override
+    //THIS CLASS IS NOT IN USE BUT WE DID NOT WANT TO RISK BREAKING ANYTHING BY REMOVING IT
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_breakfast);
