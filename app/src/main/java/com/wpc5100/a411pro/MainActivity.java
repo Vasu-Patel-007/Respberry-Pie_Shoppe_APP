@@ -30,6 +30,8 @@ public class MainActivity extends AppCompatActivity {
     TextView value2;
     TextView value3;
     int count = 0;
+    int count2 = 0;
+    int count3 = 0;
     double newPrice;
     double total1;
     double total2;
@@ -399,7 +401,7 @@ public class MainActivity extends AppCompatActivity {
                             @Override
                             public void onClick(View v) {
                                 increment2(v);
-                                newPrice = finalPrice * count;
+                                newPrice = finalPrice * count2;
                                 individual_price2.setText("  $" + newPrice);
                                 total2 = newPrice;
                             }
@@ -409,7 +411,7 @@ public class MainActivity extends AppCompatActivity {
                             @Override
                             public void onClick(View v) {
                                 decrement2(v);
-                                newPrice = finalPrice * count;
+                                newPrice = finalPrice * count2;
                                 individual_price2.setText("  $" + newPrice);
                                 total2 = newPrice;
                             }
@@ -435,7 +437,7 @@ public class MainActivity extends AppCompatActivity {
                             @Override
                             public void onClick(View v) {
                                 increment2(v);
-                                newPrice = finalPrice * count;
+                                newPrice = finalPrice * count2;
                                 individual_price2.setText("  $" + newPrice);
                                 total2 = newPrice;
                             }
@@ -445,7 +447,7 @@ public class MainActivity extends AppCompatActivity {
                             @Override
                             public void onClick(View v) {
                                 decrement2(v);
-                                newPrice = finalPrice * count;
+                                newPrice = finalPrice * count2;
                                 individual_price2.setText("  $" + newPrice);
                                 total2 = newPrice;
                             }
@@ -472,7 +474,7 @@ public class MainActivity extends AppCompatActivity {
                             @Override
                             public void onClick(View v) {
                                 increment2(v);
-                                newPrice = finalPrice * count;
+                                newPrice = finalPrice * count2;
                                 individual_price2.setText("  $" + newPrice);
                                 total2 = newPrice;
                             }
@@ -482,7 +484,7 @@ public class MainActivity extends AppCompatActivity {
                             @Override
                             public void onClick(View v) {
                                 decrement2(v);
-                                newPrice = finalPrice * count;
+                                newPrice = finalPrice * count2;
                                 individual_price2.setText("  $" + newPrice);
                                 total2 = newPrice;
                             }
@@ -509,7 +511,7 @@ public class MainActivity extends AppCompatActivity {
                             @Override
                             public void onClick(View v) {
                                 increment2(v);
-                                newPrice = finalPrice * count;
+                                newPrice = finalPrice * count2;
                                 individual_price2.setText("  $" + newPrice);
                                 total2 = newPrice;
                             }
@@ -519,7 +521,7 @@ public class MainActivity extends AppCompatActivity {
                             @Override
                             public void onClick(View v) {
                                 decrement2(v);
-                                newPrice = finalPrice * count;
+                                newPrice = finalPrice * count2;
                                 individual_price2.setText("  $" + newPrice);
                                 total2 = newPrice;
                             }
@@ -546,7 +548,7 @@ public class MainActivity extends AppCompatActivity {
                             @Override
                             public void onClick(View v) {
                                 increment2(v);
-                                newPrice = finalPrice * count;
+                                newPrice = finalPrice * count2;
                                 individual_price2.setText("  $" + newPrice);
                                 total2 = newPrice;
                             }
@@ -556,7 +558,7 @@ public class MainActivity extends AppCompatActivity {
                             @Override
                             public void onClick(View v) {
                                 decrement2(v);
-                                newPrice = finalPrice * count;
+                                newPrice = finalPrice * count2;
                                 individual_price2.setText("  $" + newPrice);
                                 total2 = newPrice;
                             }
@@ -583,7 +585,7 @@ public class MainActivity extends AppCompatActivity {
                             @Override
                             public void onClick(View v) {
                                 increment2(v);
-                                newPrice = finalPrice * count;
+                                newPrice = finalPrice * count2;
                                 individual_price2.setText("  $" + newPrice);
                                 total2 = newPrice;
                             }
@@ -593,7 +595,7 @@ public class MainActivity extends AppCompatActivity {
                             @Override
                             public void onClick(View v) {
                                 decrement2(v);
-                                newPrice = finalPrice * count;
+                                newPrice = finalPrice * count2;
                                 individual_price2.setText("  $" + newPrice);
                                 total2 = newPrice;
                             }
@@ -665,7 +667,7 @@ public class MainActivity extends AppCompatActivity {
                             @Override
                             public void onClick(View v) {
                                 increment3(v);
-                                newPrice = finalPrice * count;
+                                newPrice = finalPrice * count3;
                                 individual_price3.setText("  $" + newPrice);
                                 total3 = newPrice;
                             }
@@ -675,7 +677,7 @@ public class MainActivity extends AppCompatActivity {
                             @Override
                             public void onClick(View v) {
                                 decrement3(v);
-                                newPrice = finalPrice * count;
+                                newPrice = finalPrice * count3;
                                 individual_price3.setText("  $" + newPrice);
                                 total3 = newPrice;
                             }
@@ -702,7 +704,7 @@ public class MainActivity extends AppCompatActivity {
                             @Override
                             public void onClick(View v) {
                                 increment3(v);
-                                newPrice = finalPrice * count;
+                                newPrice = finalPrice * count3;
                                 individual_price3.setText("  $" + newPrice);
                                 total3 = newPrice;
                             }
@@ -712,7 +714,7 @@ public class MainActivity extends AppCompatActivity {
                             @Override
                             public void onClick(View v) {
                                 decrement3(v);
-                                newPrice = finalPrice * count;
+                                newPrice = finalPrice * count3;
                                 individual_price3.setText("  $" + newPrice);
                                 total3 = newPrice;
                             }
@@ -739,7 +741,7 @@ public class MainActivity extends AppCompatActivity {
                             @Override
                             public void onClick(View v) {
                                 increment3(v);
-                                newPrice = finalPrice * count;
+                                newPrice = finalPrice * count3;
                                 individual_price3.setText("  $" + newPrice);
                                 total3 = newPrice;
                             }
@@ -749,7 +751,7 @@ public class MainActivity extends AppCompatActivity {
                             @Override
                             public void onClick(View v) {
                                 decrement3(v);
-                                newPrice = finalPrice * count;
+                                newPrice = finalPrice * count3;
                                 individual_price3.setText("  $" + newPrice);
                                 total3 = newPrice;
                             }
@@ -776,7 +778,7 @@ public class MainActivity extends AppCompatActivity {
                             @Override
                             public void onClick(View v) {
                                 increment3(v);
-                                newPrice = finalPrice * count;
+                                newPrice = finalPrice * count3;
                                 individual_price3.setText("  $" + newPrice);
                                 total3 = newPrice;
                             }
@@ -786,7 +788,7 @@ public class MainActivity extends AppCompatActivity {
                             @Override
                             public void onClick(View v) {
                                 decrement3(v);
-                                newPrice = finalPrice * count;
+                                newPrice = finalPrice * count3;
                                 individual_price3.setText("  $" + newPrice);
                                 total3 = newPrice;
                             }
@@ -813,7 +815,7 @@ public class MainActivity extends AppCompatActivity {
                             @Override
                             public void onClick(View v) {
                                 increment3(v);
-                                newPrice = finalPrice * count;
+                                newPrice = finalPrice * count3;
                                 individual_price3.setText("  $" + newPrice);
                                 total3 = newPrice;
                             }
@@ -823,7 +825,7 @@ public class MainActivity extends AppCompatActivity {
                             @Override
                             public void onClick(View v) {
                                 decrement3(v);
-                                newPrice = finalPrice * count;
+                                newPrice = finalPrice * count3;
                                 individual_price3.setText("  $" + newPrice);
                                 total3 = newPrice;
                             }
@@ -906,45 +908,45 @@ public class MainActivity extends AppCompatActivity {
 
     public int increment2(View v)
     {
-        count++;
-        value2.setText("" + count);
-        newPrice = newPrice * count;
-        return count;
+        count2++;
+        value2.setText("" + count2);
+        newPrice = newPrice * count2;
+        return count2;
     }
 
     public int decrement2(View v)
     {
-        if(count <= 0)
+        if(count2 <= 0)
         {
-            count = 0;
+            count2 = 0;
         }
         else
         {
-            count--;
-            value2.setText("" + count);
+            count2--;
+            value2.setText("" + count2);
         }
-        return count;
+        return count2;
     }
 
     public int increment3(View v)
     {
-        count++;
-        value3.setText("" + count);
-        newPrice = newPrice * count;
-        return count;
+        count3++;
+        value3.setText("" + count3);
+        newPrice = newPrice * count3;
+        return count3;
     }
 
     public int decrement3(View v)
     {
-        if(count <= 0)
+        if(count3 <= 0)
         {
-            count = 0;
+            count3 = 0;
         }
         else
         {
-            count--;
-            value3.setText("" + count);
+            count3--;
+            value3.setText("" + count3);
         }
-        return count;
+        return count3;
     }
 }
